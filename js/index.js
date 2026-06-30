@@ -187,6 +187,20 @@
 })();
 
 (() => {
+
+                        const RSVP_PHONE = "51956947507";
+                        const RSVP_MESSAGE = "Sí, podré asistir a la boda de Humberto y Adelma el día sábado 8 de agosto de 2026. Mi nombre y apellido es:";
+
+                        function openRsvpWhatsApp() {
+                            const url = `https://api.whatsapp.com/send?phone=${RSVP_PHONE}&text=${encodeURIComponent(RSVP_MESSAGE)}`;
+                            window.open(url, "_blank", "noopener,noreferrer");
+                        }
+
+                        window.redirectNovio = openRsvpWhatsApp;
+                    
+})();
+
+(() => {
     const outputNameMap = {"index.html":"index.html"};
 
     function enforceExportLinks() {
